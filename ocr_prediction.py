@@ -81,8 +81,8 @@ async def process_image(file: UploadFile = File(...)) -> Dict:
 
         # Generate tips
         tips_prompt = (
-            f"Using the extracted text as context, provide general tips, strategies, or recommendations for enhancing overall performance or "
-            f"effectively addressing key challenges. Offer subject-specific advice, suggest productivity strategies, and recommend online resources, "
+            f"Using the extracted text can you predict the future of the student and provide tips for achieving better results?"
+            f"seeing the results can you sugggest some career paths for the student and suggest some online courses, books, "
             f"tools, or platforms (including links) that can support better outcomes.\n\n{extracted_text}"
         )
         tips_response = model.generate_content(tips_prompt).text
